@@ -1,54 +1,56 @@
 programa
-{	
+{
+	
 	funcao inicio()
 	{
-		inteiro base, expoente, potencia
+		inteiro expoente
+		real base, potencia
+		logico erro = falso
 
-		//Inserção de valores às variáveis pelo usuário
+		// Inserção de valores às variáveis pelo usuário
 	
 		escreva("Insira a base e o expoente para a potenciação: \n\n")
 		escreva("Base: ")
 		leia(base)
 		escreva("Expoente: ")
 		leia(expoente)
+    
+		se(expoente == 0){
+			potencia = 1
+		}senao se(base == 0 e expoente < 0){
+			// Se o expoente for negativo e a base for igual a zero, a variável lógica erro será dada como verdadeira
+			// Caso contrário, o resultado da operação "potencia = 1 / potencia", neste caso, seria "1 / 0"
 
-		//Uso da função "potenciacao" para atribuir valores a variável "potencia" e o uso do "se" e do "senao" para evitar a execução do código com expoentes negativos
-		
-		se(expoente >= 0){
+			erro = verdadeiro
+
+		}senao{
 			potencia = potenciacao(base, expoente)
+		}
+
+		se(nao erro){
 			escreva("\nO resultado é: ", potencia)
 		}senao{
-			escreva("\nErro\nOs valores devem ser positivos ou nulos")
+			escreva("---ERRO---\nO valor da base não pode ser nula quando o expoente for negativo")
 		}
 	}
 
-	funcao inteiro potenciacao(inteiro base, inteiro expoente)
-	{
-		inteiro potencia
+  funcao real potenciacao(real base, inteiro expoente){
+    // Equivalente a base elevada a um:
+    
+    real potencia = base
 
-		//O comando "se" serve para evitar erros do tipo: "Base: 5; Expoente: 0; O resultado é: 0", corrigindo o resultado para 1
-				
-			se(expoente > 0){
-					
-				potencia = base
-			
-				para(inteiro i = 1; i < expoente; i++){
-					potencia *= base
-				}
-			}senao{
-				potencia = 1
+    // O comando "para" será realizado apenas quando o expoente for maior que um:
+
+		se(expoente > 0){
+			para(inteiro i = 1; i < expoente; i++){
+				potencia *= base
 			}
+		}senao{
+			para(inteiro i = 1; i < -expoente; i++){
+				potencia *= base
+			}
+			potencia = 1 / potencia
+		}
 		retorne potencia
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 816; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
