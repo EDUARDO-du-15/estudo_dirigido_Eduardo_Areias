@@ -5,7 +5,7 @@ programa
 	{
 		inteiro anterior = 0, atual = 1, proximo = 0, n_esimo, conta_termos = 0
 
-		escreva("Informe a quantidade de termos da série de fibonacci): ")
+		escreva("Informe a quantidade de termos da série de fibonacci: ")
 		leia(n_esimo)
 
 		se(n_esimo > 0){
