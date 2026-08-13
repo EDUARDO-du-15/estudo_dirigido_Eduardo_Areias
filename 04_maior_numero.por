@@ -1,35 +1,29 @@
 programa
 {
-	
+
 	funcao inicio()
 	{
-		real maior, n1, n2, n3, n4, n5
+		real n[5], maior
 
-		escreva("Insira os numeros a serem comparados: \n")
-		leia(n1, n2, n3, n4, n5)
+		//Inserção de valores às variáveis pelo usuário
+		
+		escreva("Insira os numeros a serem comparados: \n\n")
 
-		se(n1 >= n2 e n1 >= n3 e n1 >= n4 e n1 >= n5){
-			maior = n1
-		}senao se(n2 >= n1 e n2 >= n3 e n2 >= n4 e n2 >= n5){
-			maior = n2
-		}senao se(n3 >= n1 e n3 >= n2 e n3 >= n4 e n3 >= n5){
-			maior = n3
-		}senao se(n4 >= n1 e n4 >= n3 e n4 >= n2 e n4 >= n5){
-			maior = n4
-		}senao{
-			maior = n5
+		para(inteiro i = 0; i < 5; i++){
+			escreva(i + 1, "° : ")
+			leia(n[i])
 		}
-		escreva("O maior é: ", maior)
+
+		maior = n[0]
+
+		//Atribui o valor do primeiro índice do vetor n[] à variável maior, comparando-a com os números seguintes
+
+		para(inteiro i = 1; i < 5; i ++){
+			se(n[i] > maior){
+			maior = n[i]
+			}
+		}
+
+		escreva("O maior é o: ", maior)
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 490; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
