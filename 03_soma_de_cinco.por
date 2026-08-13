@@ -3,7 +3,6 @@ programa
 
 	funcao inicio()
 	{
-    
 		real numero, soma = 0, media
 		logico erro = falso
 
