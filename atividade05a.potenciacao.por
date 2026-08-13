@@ -4,8 +4,8 @@ programa
 	funcao inicio()
 	{
 		inteiro base, expoente
-    real potencia
-    logico erro = falso
+    	real potencia
+    	logico erro = falso
 
 		//Inserção de valores às variáveis pelo usuário
 	
@@ -15,9 +15,9 @@ programa
 		escreva("Expoente: ")
 		leia(expoente)
     
-    // Equivalente a base elevada a um:
+    	// Equivalente a base elevada a um:
 
-    potencia = base
+    	potencia = base
 
 		se(expoente >= 0){
 
@@ -25,7 +25,7 @@ programa
 
 			se(expoente > 0){
 
-        // O comando "para" será realizado apenas quando o expoente for maior que um:
+        		// O comando "para" será realizado apenas quando o expoente for maior que um:
 
 				para(inteiro i = 1; i < expoente; i++){
 					potencia *= base
@@ -36,23 +36,23 @@ programa
 			}
 
 		}senao se(base == 0){
-      // Se o expoente for negativo e a base for igual a zero, a variável lógica erro será dada como verdadeira
-      // Caso contrário, o código a ser executado no "senao", atribuiria o valor "Infinity" à variável potência
-      // Já que o resultado da operação "potência = 1 / potencia" seria "1 / 0"
+			// Se o expoente for negativo e a base for igual a zero, a variável lógica erro será dada como verdadeira
+			// Caso contrário, o código a ser executado no "senao", atribuiria o valor "Infinity" à variável potência
+			// Já que o resultado da operação "potência = 1 / potencia" seria "1 / 0"
 
-      erro = verdadeiro
-    }senao{
+			erro = verdadeiro
+		}senao{
 			para(inteiro i = 1; i < -expoente; i++){
-					potencia *= base
+				potencia *= base
 			}
-      potencia = 1 / potencia
+			potencia = 1 / potencia
 		}
 
-    // Mostra o resultado da potenciação na tela se não houver um erro
-    se(nao erro){
-	    escreva("\nO resultado é: ", potencia)
-    }senao{
-      escreva("---ERRO---\nO valor da base não pode ser nula quando o expoente for negativo")
-    }
-  }
+		// Mostra o resultado da potenciação na tela se não houver um erro
+		se(nao erro){
+			escreva("\nO resultado é: ", potencia)
+		}senao{
+		escreva("---ERRO---\nO valor da base não pode ser nula quando o expoente for negativo")
+		}
+	}
 }
