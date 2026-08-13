@@ -3,27 +3,17 @@ programa
 	
 	funcao inicio()
 	{
-		real pA = 80000.00, pB = 200000.00
-		inteiro ano = 1
+		real paisA = 80000.00, paisB = 200000.00
+		inteiro ano = 0
 
-		escreva("")
+		escreva("----- PAÍS A: ", paisA, " - PAÍS B: ", paisB, " - ANO: ", ano, " -----\n\n")
+    	ano++
 		
-		enquanto(pA <= pB){
-			pA = (pA * 0.03) + pA
-			pB = (pB * 0.015) + pB
-			escreva(pA, " - ", pB, " - ", ano, "\n")
+		enquanto(paisA <= paisB){
+			paisA *= 1.03
+			paisB *= 1.015
+			escreva("PAÍS A: ", paisA, " - PAÍS B: ", paisB, " - ANO: ", ano, "\n")
 			ano++
 		}
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 247; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
