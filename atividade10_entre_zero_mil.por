@@ -15,10 +15,10 @@ programa
       limpa()
     }senao{
       contador_numeros++
-
+  
       // Cada número válido é comparado com o maior e com o menor
       // Além de, posteriormente, ser adicionado à soma
-
+  
       se(contador_numeros == 1){
         maior = numero
         menor = numero
@@ -28,16 +28,14 @@ programa
       }senao se(numero < menor){
         menor = numero
       }
-
+  
       soma += numero
-            
+              
       // O código dentro do escopo do comando "enquanto" continua executando enquanto o usuário digitar 1
-
+  
       escreva("Você deseja continuar? [1]: SIM; [qualquer outro número]: NÃO: ")
       leia(continuar)
-       limpa()
-
-      
+      limpa()
     }
   }
 
