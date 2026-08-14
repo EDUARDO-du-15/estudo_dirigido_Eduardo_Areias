@@ -13,7 +13,7 @@ programa
 
 			para(inteiro i = 1 ; i < n ; i++){
 				// Cálculo do fatorial, da seguinte forma (quando n é 3): 3 = 3 * 2 (quando i é 1); 6 = 6 * 1 (quando i é 2), ou seja, 3! = 6
-				n2 *= n - i
+				n2 *= (n - i)
 			}
 			escreva("O resultado é: ", n2)
 		}senao se(n == 0){
