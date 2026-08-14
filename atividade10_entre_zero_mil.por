@@ -22,8 +22,7 @@ programa
       se(contador_numeros == 1){
         maior = numero
         menor = numero
-      }
-      se(numero > maior){
+      }senao se(numero > maior){
         maior = numero
       }senao se(numero < menor){
         menor = numero
