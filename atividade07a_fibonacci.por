@@ -8,12 +8,12 @@ programa
 		escreva(anterior,  "\n")
 
 		enquanto(atual <= 500){
-	
-			escreva(atual, "\n")
 			proximo = fibonacci(anterior, atual)
 			
 			anterior = atual
 			atual = proximo
+			
+			escreva(atual, "\n")
 		}
 		escreva("FIM DA SEQUÊNCIA")
 	}
